@@ -1,0 +1,25 @@
+{
+  "routes": [
+          {
+            "path" : "/resources",
+             "description" : "for local testing purpose",
+             "target": {
+                      "type": "service",
+                      "name":  "sapui5",
+                      "entryPath" : "/resources"
+                 
+                          }
+            } ,
+             {
+            "path" : "/sap/opu/odata",
+             "description" : "s/4 hana system",
+             "target": {
+                      "type": "destination",
+                      "name":  "NS4",
+                      "entryPath" : "/sap/opu/odata"
+                 
+                          }
+            } 
+            ]
+          
+}

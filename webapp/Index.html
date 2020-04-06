@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+                data-sap-ui-libs= "sap.m, sap.ui.table"
+                data-sap-ui-theme= "sap_bluecrystal"
+              data-sap-ui-resourceroots= '{
+                    "tcs.fin.ar" :  "./" }'
+                data-sap-ui-xx-bindingsyntax="complex"    
+                    ></script>
+     <script>
+    //  var oBtn = new sap.m.Button("idS",{
+    //                                 text : "Click me",
+    //                                 press: function(){
+    //                                     alert("Welcome to UI5");
+    //                                 }
+    //                                 }); 
+                                    
+    //         oBtn.placeAt("myBtn");    
+    //   var oView = new sap.ui.view("idView", {
+    //       type: "JS",
+    //       viewName: "Arun.view.Main"
+    //       });
+    //      oView.placeAt("myJS")
+         
+    // var oView1 = new sap.ui.view("idXMLView", {
+    //      type: "XML",
+    //      viewName: "Arun.view.MyXML"
+    // });     
+    //     oView1.placeAt("myBtn"); 
+   var oCompContainer = new sap.ui.core.ComponentContainer({
+       name: "tcs.fin.ar"
+        
+   });
+       oCompContainer.placeAt("myBtn");
+        // oView1.placeAt("myBtn"); 
+    
+             </script> 
+    
+    </head>
+    <body class="sapUiBody">
+        <!--<div id= "myJS"></div>-->
+        <div id="myBtn"></div>
+        
+    </body>
+    
+    
+    
+</html>

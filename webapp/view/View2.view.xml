@@ -1,0 +1,85 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tcs.fin.ar.controller.View2"
+   xmlns:f="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+			<Page title="Second Screen" showNavButton="true" navButtonPress="onBack">
+				<content>
+				  <!--  	<Button icon="sap-icon://nav-back" text="Back" press="onBack"></Button>-->
+				  <ObjectHeader  title="{ProductId}"
+				                 intro="{Description}"
+				                 icon="{image}"
+				                 number="{Price}"
+				                 numberUnit="{CurrencyCode}">
+				      
+				  </ObjectHeader>
+				  <IconTabBar>
+				      <items>
+				          <IconTabFilter key="idMore" text="More Detail" icon="sap-icon://display-more">
+				             <core:Fragment type="XML" fragmentName="tcs.fin.ar.fragments.simple"></core:Fragment>
+				          </IconTabFilter>
+				           <IconTabFilter key="idSupp" text="Supplier" icon="sap-icon://supplier">
+				              <Table id="idTable"  items="{local>/Supplier}">
+				                  <headerToolbar>
+				                      <Toolbar>
+				                          <ToolbarSpacer/>
+				                          <Button icon="sap-icon://settings"  press="onSetting"></Button>
+				                      </Toolbar>
+				                      
+				                  </headerToolbar>
+				                 <columns>
+				                     <Column>
+				                         <Label text="{name}"></Label>
+				                     </Column>
+				                       <Column>
+				                         <Label text="{contactPerson}"></Label>
+				                     </Column>
+				                       <Column>
+				                         <Label text="{sinceWhen}"></Label>
+				                     </Column>
+				                       <Column>
+				                         <Label text="{city}"></Label>
+				                     </Column>
+				                 </columns> 
+				                    <items>
+				                         <ColumnListItem>
+				                             <cells>
+				                                 <Text text="{local>name}"> </Text>
+				                                 <Input value="{local>contactPerson}"></Input>
+				                                 <Text text="{local>sinceWhen}"></Text>
+				                                 <!--<Text text="{city}"></Text>-->
+				                                 <Input value="{local>city}" showValueHelp="true" valueHelpRequest="onF4Help"></Input>
+				                             </cells>
+				                         </ColumnListItem>
+				                     </items>
+				                  
+				              </Table>
+				          </IconTabFilter>
+				           <IconTabFilter key="idCity" text="Cities" icon="sap-icon://home-share">
+				              <Select items="{local>/Cities}">
+				                  <core:Item key="{local>name}" text="{local>name}"></core:Item>
+				              </Select>
+				              <ComboBox items="{local>/Cities}">
+				                   <core:Item key="{local>name}" text="{local>name}"></core:Item>
+				              </ComboBox>
+				              <MultiComboBox items="{local>/Cities}">
+				                    <core:Item key="{local>name}" text="{local>name}"></core:Item>
+				              </MultiComboBox>
+				          </IconTabFilter>
+				      </items>
+				      
+				  </IconTabBar>
+				  <Button text="Function Call" press="onFunctionImport"></Button> 
+				  
+				</content>
+					<footer>
+				    <Toolbar>
+				          <ToolbarSpacer/>
+				        <Button text="Save" type="Accept" press="onSave"></Button>
+				        <Button text="Cancel" type="Rejected"></Button>
+				    </Toolbar>
+				</footer>
+				
+				
+			</Page>
+
+</mvc:View>

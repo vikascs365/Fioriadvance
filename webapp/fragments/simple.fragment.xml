@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+xmlns="sap.m"
+xmlns:f="sap.ui.layout.form">
+    
+               <f:SimpleForm>
+				                  <f:content>
+				                      <Label text="Type"></Label>
+				                      <Text  text="{Category}"></Text>
+				                        <Label text="Price"></Label>
+				                      <Text  text="{Price}{CurrencyCode}"></Text>
+				                        <Label text="supplier"></Label>
+				                      <Text  text="{SupplierName}"></Text>
+				                        <Label text="Notes"></Label>
+				                      <Text  text="{Description}"></Text>
+				                       
+				                  </f:content>
+				                  
+				              </f:SimpleForm> 
+    
+    
+    
+</core:FragmentDefinition>
