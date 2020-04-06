@@ -75,7 +75,7 @@
 				    <Toolbar>
 				          <ToolbarSpacer/>
 				        <Button text="Save" type="Accept" press="onSave"></Button>
-				        <Button text="Cancel" type="Rejected"></Button>
+				        <Button text="Cancel" type="Reject"></Button>
 				    </Toolbar>
 				</footer>
 				
